@@ -1,0 +1,148 @@
+#root {
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  background-color: #0D0F11;
+}
+
+h1 {
+  font-size: 2.1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: #5395cf;
+  text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.3);
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.title {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 0 12px;
+  background-color: #151a1e;
+  margin-bottom: 10px;
+}
+
+.tasks-header, .tasks-table {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-top: 10px;
+}
+
+.tasks-inputs {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+.tasks-metric {
+  margin: 10px;
+  padding: 10px;
+  width: 160px;
+  height: 110px;
+  border-radius: 15px;
+  background-color: #262C36;
+}
+
+.tasks-completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+input, select {
+  width: 200px;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  font-size: 0.85rem;
+  border: none;
+  color: rgba(255, 255, 255, 0.9);
+  background-color: #262C36;
+}
+
+input:focus, select:focus {
+  border: 1px solid #5395cf;
+  outline: none;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+input[type=checkbox] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 10px;
+  height: 10px;
+  margin: 5px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 3px;
+  position: relative;
+  cursor: pointer;
+}
+
+input[type=checkbox]:checked {
+  background-color: #5395cf;
+}
+
+input[type=checkbox]:checked::after {
+  content: '✔';
+  background-color: #5395cf;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+table {
+  min-width: 60%;
+  border-collapse: collapse;
+}
+
+th {
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding-bottom: 10px;
+  cursor: pointer;
+}
+
+th:hover {
+  text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.4);
+}
+.sorted-asc:after {
+  content: ' ↓';
+  color: #5395cf;
+}
+
+.sorted-desc:after {
+  content: ' ↑';
+}
+
+.sorted-desc-active:after {
+  content: ' ↑';
+  color: #5395cf;
+}
